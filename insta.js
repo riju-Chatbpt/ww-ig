@@ -1,4 +1,8 @@
-addEventListener("fetch", e => e.respondWith(handle(e.request)));
+export default {
+  async fetch(request, env, ctx) {
+    return handle(request);
+  }
+};
 
 var CORS = {
   "Access-Control-Allow-Origin": "*",
